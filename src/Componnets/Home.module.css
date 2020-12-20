@@ -1,0 +1,186 @@
+.progress{
+    width: 0;
+    height: 1rem;
+    background-color: rgb(153, 153, 153);
+}
+.star {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .9em;
+    margin-right: .9em;
+    margin-bottom: 1.2em;
+    border-right:  .3em solid transparent;
+    border-bottom: .7em  solid black;
+    border-left:   .3em solid transparent;
+    font-size: 10px;
+}
+.star::before, .star::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: .6em;
+    left: -1em;
+    border-right:  1em solid transparent;
+    border-bottom: .7em  solid black;
+    border-left:   1em solid transparent;
+    transform: rotate(-35deg);
+}
+  
+.star::after {  
+    transform: rotate(35deg);
+}
+
+.questionCont{
+    width: 80%;
+    height: 65vh;
+    margin: auto;
+    margin-top: 3%;
+}
+.questionContParent{
+    height: 75vh;
+}
+.questionNum{
+    padding: 10px;
+    font-size: 2rem;
+}
+.type{
+    padding: 0 12px 5px 12px;
+    font-size: 1rem;
+}
+.starCont{
+    padding: 1px 10px;
+}
+.question{
+    padding: 14px;
+    margin-top: 4%;
+    font-size: 1.4rem;
+}
+.answers{
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 8rem;
+    grid-row-gap: 2rem;
+}
+.answerButton{
+    cursor: pointer;
+    height: 3rem;
+    background-color: rgb(223, 222, 222);
+    border: 1px solid black;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1.1rem;
+}
+.block{
+    cursor: not-allowed;
+}
+
+.answeredColor{
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+.correct{
+    font-size: 1.2rem;
+    cursor: not-allowed;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.scoreCont{
+    width: 80%;
+    margin: auto;
+}
+.score{
+    padding: 10px 15px;
+}
+.minScore{
+    background-color: black;
+}
+.currentScore{
+    background-color: gray;
+}
+.maxScore{
+    background-color:  rgb(202, 199, 199);
+
+}
+.scoreBar{
+    margin: 0 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.scoreBar div{
+    width: 0;
+    height: 2rem;
+    border-radius: 9px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+.evaluate{
+    text-align: center;
+    font-size: 2rem;
+}
+.evaluate button{
+    width: 14rem;
+    border-radius: 10px;
+    height: 3rem;
+    outline: none;
+    border: 2px solid black;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .answers{
+        grid-template-columns: auto;
+        grid-row-gap: 1rem;
+    }
+    .questionCont{
+        height: 95vh;
+    }
+    .questionContParent{
+        height: 120vh;
+    }
+    .questionNum{
+        font-size: 1.5rem;
+    }
+    .type{
+        font-size: 0.9rem;
+    }
+    .star {
+        font-size: 7px;
+    }
+    .question{
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    .answeredColor{
+        font-size: 1rem;
+    }
+    
+    .correct{
+        font-size: 1rem;
+    }
+    .evaluate{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+    .evaluate button{
+        width: 10rem;
+        height: 2.5rem;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+
+}
